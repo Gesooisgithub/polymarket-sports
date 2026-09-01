@@ -1,0 +1,21 @@
+{
+  "hotkeys": {
+    "buy_team1": "ctrl+f1",
+    "buy_draw": "ctrl+f2",
+    "buy_team2": "ctrl+f3",
+    "sell_team1": "ctrl+f4",
+    "sell_draw": "ctrl+f5",
+    "sell_team2": "ctrl+f6",
+    "limit_team1": "ctrl+shift+f1",
+    "limit_draw": "ctrl+shift+f2",
+    "limit_team2": "ctrl+shift+f3",
+    "set_amount": "ctrl+a",
+    "check_balance": "ctrl+b",
+    "change_markets": "ctrl+m",
+    "quit": "ctrl+q"
+  },
+  "default_amount": 1.0,
+  "cooldown_seconds": 0.5,
+  "clob_host": "https://clob.polymarket.com",
+  "gamma_host": "https://gamma-api.polymarket.com"
+}

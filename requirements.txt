@@ -1,0 +1,25 @@
+# Official unified Polymarket SDK (CLOB V2 + WebSocket).
+# Hard pin: the 0.x line explicitly states that minor releases may introduce
+# breaking changes, so we do not let the version float underneath a bot that
+# sends real orders.
+polymarket-client==0.1.0
+
+# Configuration: loads .env (POLYMARKET_PRIVATE_KEY, IPROYAL_PROXY, etc.)
+python-dotenv>=1.0.1
+
+# Global hotkeys (requires Administrator on Windows)
+keyboard>=0.13.5
+
+# HTTP client for the Gamma API in market_info.py (the SDK ships its own copy).
+# The HTTPS_PROXY variable is picked up automatically thanks to trust_env=True.
+httpx[http2]>=0.27.0
+
+# Coloured console output
+colorama>=0.4.6
+
+# User stream WebSocket.
+# >=14 is mandatory, not a preference: polymarket-client only declares
+# websockets>=13, but the `proxy=True` default (which makes it read HTTPS_PROXY
+# from the environment) exists only from 14 on. With a 13.x the fill stream
+# would bypass the proxy and go out on the direct connection.
+websockets>=14
